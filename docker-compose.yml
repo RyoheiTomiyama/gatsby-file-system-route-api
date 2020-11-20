@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+      - node_modules:/app/node_modules
+    ports:
+      - ${PORT:-8080}:${PORT:-8080}
+      - ${PORT_SERVE:-9000}:9000
+    environment:
+      PORT: 8080
+    working_dir: /app
+    command: yarn develop
+    logging:
+      driver: json-file
+      options:
+        max-file: '1'
+        max-size: 1m
+
+volumes:
+  node_modules:

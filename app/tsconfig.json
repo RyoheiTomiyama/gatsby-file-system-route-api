@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "ES5",
+    "jsx": "preserve",
+    "lib": ["dom", "es2015", "es2017", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "preserveConstEnums": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
+    "typeRoots": ["./types", "node_modules/@types"]
+  },
+  "include": ["./src/**/*", "./types/**/*"]
+}

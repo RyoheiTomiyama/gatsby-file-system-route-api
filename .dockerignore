@@ -1,0 +1,13 @@
+.DS_Store
+.circleci
+.dockerignore
+.editorconfig
+.git
+.gitignore
+.node-version
+Dockerfile
+README.md
+docker-compose.yml
+node_modules
+data_org
+wp
